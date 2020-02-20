@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="mPT-x1-8hO">
-                                <rect key="frame" x="0.0" y="251" width="0.0" height="216"/>
+                                <rect key="frame" x="0.0" y="251" width="414" height="216"/>
                                 <date key="minimumDate" timeIntervalSinceReferenceDate="-347155200">
                                     <!--1990-01-01 00:00:00 +0000-->
                                 </date>
@@ -40,6 +40,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="Aceptar"/>
                                 <connections>
+                                    <action selector="confirmarFechaIntroducida:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z6g-Nh-M3o"/>
                                     <segue destination="AJH-Js-vAA" kind="show" id="q4V-dh-79b"/>
                                 </connections>
                             </button>
@@ -59,6 +60,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="bl3-IX-G9j"/>
+                    <connections>
+                        <outlet property="fechaIntroducida" destination="mPT-x1-8hO" id="BpR-Js-OK4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -123,7 +127,9 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tzD-DL-IRI">
                                 <rect key="frame" x="49" y="304" width="316" height="264"/>
-                                <string key="text">El Cerdo es altamente apreciado por su generosidad. Actúa siempre de buena fe, guiados por principios nobles. Tienen mucho talento para las actividades académicas así como los negocios y emprendimientos.Tardan en tomar decisiones pero cuando lo hacen son determinantes. Poseen un gran sentido del humor que los hace ser buscados en los círculos sociales. En el amor son muy sensuales y llevarán a sus parejas a sentir grandes pasiones.</string>
+                                <string key="text">El Cerdo es altamente apreciado por su generosidad. Actúa siempre de buena fe, guiados por principios nobles. Tienen mucho talento para las actividades académicas así como los negocios y emprendimientos.
+
+Tardan en tomar decisiones pero cuando lo hacen son determinantes. Poseen un gran sentido del humor que los hace ser buscados en los círculos sociales. En el amor son muy sensuales y llevarán a sus parejas a sentir grandes pasiones.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

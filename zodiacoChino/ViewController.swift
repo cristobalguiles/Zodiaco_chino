@@ -10,11 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+
+    @IBAction func confirmarFechaIntroducida(_ sender: UIButton) {
+        
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBOutlet weak var fechaIntroducida: UIDatePicker!
+    
 }
 
