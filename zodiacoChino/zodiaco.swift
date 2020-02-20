@@ -14,6 +14,23 @@ struct Zodiaco {
     var fechaFinSignoZodiaco : String
     var descripcion : String
     var compatibilidadEntreSignos : String
+    
+    func cualEsTuSignoDelZodiaco( fechaIntroducida : Date) -> Zodiaco{
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "sp_SP") // set locale to reliable US_POSIX
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        for zodiaco in 0 ..< tamañoListaZodiaco  {
+            let fechaInicioSignoZodiaco = dateFormatter.date(from: listaZodiacos[zodiaco].fechaInicioSignoZodiaco)
+            
+            let fechaFinSignoZodiaco = dateFormatter.date(from: listaZodiacos[zodiaco].fechaFinSignoZodiaco)
+            guard let fechaInicioZodiaco = fechaInicioSignoZodiaco , let fechaFinZodiaco = fechaFinSignoZodiaco else { continue }
+            
+            if fechaInicioZodiaco >= fechaIntroducida && fechaIntroducida <= fechaFinZodiaco {
+                return listaZodiacos[zodiaco]
+            }
+        }
+        return Zodiaco(signo: "", fechaInicioSignoZodiaco: "", fechaFinSignoZodiaco: "", descripcion: "", compatibilidadEntreSignos: "")
+    }
 }
 
 let zodiaco1 = Zodiaco(signo: "Caballo", fechaInicioSignoZodiaco: "27/01/1990", fechaFinSignoZodiaco: "14/02/1991", descripcion: "Espíritus libres e indomables, les encanta cambiar constantemente de ambiente y de proyectos. No siempre son reflexivos pero sí decididos en todo lo que emprenden. Tienen mucho talento y sentido de la oportunidad guiados por una alegría que contagia. No escucha a los demás porque le cuesta recibir consejos. Representa siempre el triunfo y la victoria. Aunque tienen buena suerte en los negocios, no siempre son los mejores administradores de sus riquezas ya que tienden a ser ostentosos.", compatibilidadEntreSignos: "El caballo es compatible con el tigre y el perro")
@@ -44,20 +61,5 @@ let zodiaco12 = Zodiaco(signo: "Serpiente", fechaInicioSignoZodiaco: "24/01/2001
 var listaZodiacos = [zodiaco1,zodiaco2,zodiaco3,zodiaco4,zodiaco5,zodiaco6,zodiaco7,zodiaco8,zodiaco9,zodiaco10,zodiaco11,zodiaco12]
 let tamañoListaZodiaco = listaZodiacos.count
 
-func cualEsTuSignoDelZodiaco( fechaIntroducida : Date) -> Zodiaco{
-    let dateFormatter = DateFormatter()
-    dateFormatter.locale = Locale(identifier: "sp_SP") // set locale to reliable US_POSIX
-    dateFormatter.dateFormat = "dd/MM/yyyy"
-    for zodiaco in 0 ..< tamañoListaZodiaco  {
-        let fechaInicioSignoZodiaco = dateFormatter.date(from: listaZodiacos[zodiaco].fechaInicioSignoZodiaco)
-        
-        let fechaFinSignoZodiaco = dateFormatter.date(from: listaZodiacos[zodiaco].fechaFinSignoZodiaco)
-        guard let fechaInicioZodiaco = fechaInicioSignoZodiaco , let fechaFinZodiaco = fechaFinSignoZodiaco else { continue }
-        
-        if fechaInicioZodiaco >= fechaIntroducida && fechaIntroducida <= fechaFinZodiaco {
-            return listaZodiacos[zodiaco]
-        }
-    }
-    return Zodiaco(signo: "", fechaInicioSignoZodiaco: "", fechaFinSignoZodiaco: "", descripcion: "", compatibilidadEntreSignos: "")
-}
+
 

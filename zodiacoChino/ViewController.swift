@@ -9,12 +9,12 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    var zodiaco : Zodiaco!
     
 
     @IBAction func confirmarFechaIntroducida(_ sender: UIButton) {
-        
-        
+        let tuZodiaco = zodiaco.cualEsTuSignoDelZodiaco(fechaIntroducida: fechaIntroducida.date)
+        print (tuZodiaco.signo)
     }
     
     override func viewDidLoad() {
