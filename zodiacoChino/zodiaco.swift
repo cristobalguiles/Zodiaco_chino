@@ -41,10 +41,23 @@ let zodiaco11 = Zodiaco(signo: "Dragón", fechaInicioSignoZodiaco: "05/02/2000",
 let zodiaco12 = Zodiaco(signo: "Serpiente", fechaInicioSignoZodiaco: "24/01/2001", fechaFinSignoZodiaco: "11/02/2002", descripcion: "Derrochan simpatía al igual que el animal, por lo que la frase “encantadores de serpientes” encaja perfectamente. Discretos, observadores y de ideas fijas. No pierden el norte con facilidad por su prudencia. No se distingue por ser grandes conversadores. Aunque son fieles, no dejarán pasar la oportunidad de una aventura si así se le presenta.", compatibilidadEntreSignos: "La serpiente es compatible con el gallo y el buey")
 
 
-var listaZodiaco = [zodiaco1,zodiaco2,zodiaco3,zodiaco4,zodiaco5,zodiaco6,zodiaco7,zodiaco8,zodiaco9,zodiaco10,zodiaco11,zodiaco12]
+var listaZodiacos = [zodiaco1,zodiaco2,zodiaco3,zodiaco4,zodiaco5,zodiaco6,zodiaco7,zodiaco8,zodiaco9,zodiaco10,zodiaco11,zodiaco12]
+let tamañoListaZodiaco = listaZodiacos.count
 
-func cualEsTuSignoDelZodiaco( fecha : Date){
-    
-    
+func cualEsTuSignoDelZodiaco( fechaIntroducida : Date) -> Zodiaco{
+    let dateFormatter = DateFormatter()
+    dateFormatter.locale = Locale(identifier: "sp_SP") // set locale to reliable US_POSIX
+    dateFormatter.dateFormat = "dd/MM/yyyy"
+    for zodiaco in 0 ..< tamañoListaZodiaco  {
+        let fechaInicioSignoZodiaco = dateFormatter.date(from: listaZodiacos[zodiaco].fechaInicioSignoZodiaco)
+        
+        let fechaFinSignoZodiaco = dateFormatter.date(from: listaZodiacos[zodiaco].fechaFinSignoZodiaco)
+        guard let fechaInicioZodiaco = fechaInicioSignoZodiaco , let fechaFinZodiaco = fechaFinSignoZodiaco else { continue }
+        
+        if fechaInicioZodiaco >= fechaIntroducida && fechaIntroducida <= fechaFinZodiaco {
+            return listaZodiacos[zodiaco]
+        }
+    }
+    return Zodiaco(signo: "", fechaInicioSignoZodiaco: "", fechaFinSignoZodiaco: "", descripcion: "", compatibilidadEntreSignos: "")
 }
 
