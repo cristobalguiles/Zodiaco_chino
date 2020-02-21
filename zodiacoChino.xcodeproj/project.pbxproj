@@ -14,6 +14,8 @@
 		8E66AC3E23FC93F30036A1E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E66AC3C23FC93F30036A1E8 /* Main.storyboard */; };
 		8E66AC4023FC93F40036A1E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E66AC3F23FC93F40036A1E8 /* Assets.xcassets */; };
 		8E66AC4323FC93F40036A1E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E66AC4123FC93F40036A1E8 /* LaunchScreen.storyboard */; };
+		8EA57CD123FFE774004FF1EA /* descripcionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA57CD023FFE774004FF1EA /* descripcionViewController.swift */; };
+		8EA57CD323FFE7B3004FF1EA /* compatibilidadSignosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA57CD223FFE7B3004FF1EA /* compatibilidadSignosViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		8E66AC3F23FC93F40036A1E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E66AC4223FC93F40036A1E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E66AC4423FC93F40036A1E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EA57CD023FFE774004FF1EA /* descripcionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = descripcionViewController.swift; sourceTree = "<group>"; };
+		8EA57CD223FFE7B3004FF1EA /* compatibilidadSignosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = compatibilidadSignosViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				8E66AC4123FC93F40036A1E8 /* LaunchScreen.storyboard */,
 				8E66AC4423FC93F40036A1E8 /* Info.plist */,
 				8E514D6523FF2E7500B92BAB /* zodiaco.swift */,
+				8EA57CD023FFE774004FF1EA /* descripcionViewController.swift */,
+				8EA57CD223FFE7B3004FF1EA /* compatibilidadSignosViewController.swift */,
 			);
 			path = zodiacoChino;
 			sourceTree = "<group>";
@@ -145,6 +151,8 @@
 				8E514D6623FF2E7500B92BAB /* zodiaco.swift in Sources */,
 				8E66AC3723FC93F30036A1E8 /* AppDelegate.swift in Sources */,
 				8E66AC3923FC93F30036A1E8 /* SceneDelegate.swift in Sources */,
+				8EA57CD123FFE774004FF1EA /* descripcionViewController.swift in Sources */,
+				8EA57CD323FFE7B3004FF1EA /* compatibilidadSignosViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

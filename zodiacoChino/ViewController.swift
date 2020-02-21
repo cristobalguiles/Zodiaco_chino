@@ -9,20 +9,23 @@
 import UIKit
 
 class ViewController: UIViewController {
+    // MARK: - Outlets
+    @IBOutlet weak var fechaIntroducida: UIDatePicker!
+    
+    // MARK: - Internal Vars
     var zodiaco : Zodiaco!
     
-
-    @IBAction func confirmarFechaIntroducida(_ sender: UIButton) {
-        let tuZodiaco = zodiaco.cualEsTuSignoDelZodiaco(fechaIntroducida: fechaIntroducida.date)
-        print (tuZodiaco.signo)
-    }
-    
+    // MARK: - Livecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-    @IBOutlet weak var fechaIntroducida: UIDatePicker!
-    
+    // MARK: - IBActions
+    @IBAction func confirmarFechaIntroducida(_ sender: UIButton) {
+        let zodiacos = listaZodiacos.init()
+        let tuZodiaco = zodiacos.cualEsTuSignoDelZodiaco(fechaIntroducida: fechaIntroducida.date)
+        print(tuZodiaco.signo)
+    }
 }
 

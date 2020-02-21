@@ -17,11 +17,11 @@
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="mPT-x1-8hO">
                                 <rect key="frame" x="0.0" y="251" width="414" height="216"/>
-                                <date key="minimumDate" timeIntervalSinceReferenceDate="-347155200">
-                                    <!--1990-01-01 00:00:00 +0000-->
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="-344908800">
+                                    <!--1990-01-27 00:00:00 +0000-->
                                 </date>
-                                <date key="maximumDate" timeIntervalSinceReferenceDate="631108800">
-                                    <!--2020-12-31 12:00:00 +0000-->
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="35121600">
+                                    <!--2002-02-11 12:00:00 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="es_ES"/>
                             </datePicker>
@@ -71,7 +71,7 @@
         <!--Compatibilidad-->
         <scene sceneID="R1i-b4-aVH">
             <objects>
-                <viewController id="mdW-lf-cf2" sceneMemberID="viewController">
+                <viewController id="mdW-lf-cf2" customClass="compatibilidadSignosViewController" customModule="zodiacoChino" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E45-di-pbB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -117,7 +117,7 @@
         <!--Descripcion-->
         <scene sceneID="SqE-Xt-qnK">
             <objects>
-                <viewController id="ehr-12-IiK" sceneMemberID="viewController">
+                <viewController id="ehr-12-IiK" customClass="descripcionViewController" customModule="zodiacoChino" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jae-Yb-GVx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
