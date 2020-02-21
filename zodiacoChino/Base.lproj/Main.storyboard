@@ -152,6 +152,10 @@ Tardan en tomar decisiones pero cuando lo hacen son determinantes. Poseen un gra
                         <viewLayoutGuide key="safeArea" id="n8t-Qx-1iv"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Descripcion" image="square.and.arrow.up" catalog="system" id="zNA-1O-Zch"/>
+                    <connections>
+                        <outlet property="descripcionDelSignoDelZodiaco" destination="tzD-DL-IRI" id="PuI-GI-KDj"/>
+                        <outlet property="imagenDelSignoDeLZodiaco" destination="Vew-Ql-xwG" id="HK4-HL-Lh0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ddn-0I-Tap" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

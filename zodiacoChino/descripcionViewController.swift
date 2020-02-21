@@ -11,15 +11,22 @@ import UIKit
 class descripcionViewController: UIViewController {
     // MARK: - Outlets
     
+    @IBOutlet weak var descripcionDelSignoDelZodiaco: UILabel!
+    
+    
+    @IBOutlet weak var imagenDelSignoDeLZodiaco: UIImageView!
+    
     // MARK: - Internal Vars
     var fechaDeNacimiento : Date = Date()
-    
+    var zodiaco : Zodiaco = Zodiaco(signo: "", fechaInicioSignoZodiaco: "", fechaFinSignoZodiaco: "", descripcion: "", compatibilidadEntreSignos: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+    
     
 
     /*
