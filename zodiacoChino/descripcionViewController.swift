@@ -9,7 +9,12 @@
 import UIKit
 
 class descripcionViewController: UIViewController {
-
+    // MARK: - Outlets
+    
+    // MARK: - Internal Vars
+    var fechaDeNacimiento : Date = Date()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -9,7 +9,12 @@
 import UIKit
 
 class compatibilidadSignosViewController: UIViewController {
-
+    // MARK: - Outlets
+    
+    // MARK: - Internal Vars
+    var fechaDeNacimiento : Date = Date()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

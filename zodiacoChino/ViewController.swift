@@ -12,20 +12,24 @@ class ViewController: UIViewController {
     // MARK: - Outlets
     @IBOutlet weak var fechaIntroducida: UIDatePicker!
     
-    // MARK: - Internal Vars
-    var zodiaco : Zodiaco!
-    
+
     // MARK: - Livecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "" ,
+            let tabBarController = segue.destination as? UITabBarController ,
+            let primerViewController = tabBarController.children[0] as? descripcionViewController,
+            let segundoViewController = tabBarController.children[1] as? compatibilidadSignosViewController else {return}
+        primerViewController.fechaDeNacimiento = fechaIntroducida.date
+        segundoViewController.fechaDeNacimiento = fechaIntroducida.date
+}
 
     // MARK: - IBActions
     @IBAction func confirmarFechaIntroducida(_ sender: UIButton) {
-        let zodiacos = listaZodiacos.init()
-        let tuZodiaco = zodiacos.cualEsTuSignoDelZodiaco(fechaIntroducida: fechaIntroducida.date)
-        print(tuZodiaco.signo)
     }
 }
 
