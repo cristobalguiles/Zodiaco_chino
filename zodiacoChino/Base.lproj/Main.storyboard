@@ -41,7 +41,7 @@
                                 <state key="normal" title="Aceptar"/>
                                 <connections>
                                     <action selector="confirmarFechaIntroducida:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z6g-Nh-M3o"/>
-                                    <segue destination="AJH-Js-vAA" kind="show" id="q4V-dh-79b"/>
+                                    <segue destination="AJH-Js-vAA" kind="show" identifier="tabBar" id="q4V-dh-79b"/>
                                 </connections>
                             </button>
                         </subviews>

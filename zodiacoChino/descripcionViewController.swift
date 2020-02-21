@@ -18,11 +18,25 @@ class descripcionViewController: UIViewController {
     
     // MARK: - Internal Vars
     var fechaDeNacimiento : Date = Date()
-    var zodiaco : Zodiaco = Zodiaco(signo: "", fechaInicioSignoZodiaco: "", fechaFinSignoZodiaco: "", descripcion: "", compatibilidadEntreSignos: "")
+    let zodiacos = listaZodiacos.init()
     
+    func tuZodiaco () -> Zodiaco{
+        let tuZodiaco = zodiacos.cualEsTuSignoDelZodiaco(fechaIntroducida: fechaDeNacimiento)
+        return tuZodiaco
+    }
+    
+    func textoDescriptivoSignoZodiaco () {
+        descripcionDelSignoDelZodiaco.text = tuZodiaco().descripcion
+    }
+    
+    func imagenDelSignoDelZodiaco (){
+        imagenDelSignoDeLZodiaco.image = UIImage(named: tuZodiaco().signo)
+    }
+    //let tuZodiaco = self.zodiacos.cualEsTuSignoDelZodiaco(fechaIntroducida: self.fechaDeNacimiento)
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        textoDescriptivoSignoZodiaco()
+        imagenDelSignoDelZodiaco()
         // Do any additional setup after loading the view.
     }
     

@@ -20,10 +20,11 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard segue.identifier == "" ,
+        guard segue.identifier == "tabBar" ,
             let tabBarController = segue.destination as? UITabBarController ,
             let primerViewController = tabBarController.children[0] as? descripcionViewController,
             let segundoViewController = tabBarController.children[1] as? compatibilidadSignosViewController else {return}
+        
         primerViewController.fechaDeNacimiento = fechaIntroducida.date
         segundoViewController.fechaDeNacimiento = fechaIntroducida.date
 }
