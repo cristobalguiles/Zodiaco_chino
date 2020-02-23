@@ -9,15 +9,33 @@
 import UIKit
 
 class compatibilidadSignosViewController: UIViewController {
+    
+    func imagenDelSignoDelZodiaco (){
+        imagenSigno.image = UIImage(named: tuZodiaco().signo)
+    }
+    
+    func compatibilidadEntreSignos(){
+        textoCompatibilidadEntreSignos.text = tuZodiaco().compatibilidadEntreSignos
+    }
     // MARK: - Outlets
+    
+    @IBOutlet weak var imagenSigno: UIImageView!
+    
+    @IBOutlet weak var textoCompatibilidadEntreSignos: UILabel!
     
     // MARK: - Internal Vars
     var fechaDeNacimiento : Date = Date()
+    let zodiacos = listaZodiacos.init()
     
+    func tuZodiaco () -> Zodiaco{
+        let tuZodiaco = zodiacos.cualEsTuSignoDelZodiaco(fechaIntroducida: fechaDeNacimiento)
+        return tuZodiaco
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        imagenDelSignoDelZodiaco()
+        compatibilidadEntreSignos()
         // Do any additional setup after loading the view.
     }
     
