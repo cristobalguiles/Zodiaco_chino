@@ -108,14 +108,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dyH-qY-5Dp"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Compatibilidad" image="square.and.arrow.down.fill" catalog="system" id="Wc7-AQ-ZAp"/>
+                    <tabBarItem key="tabBarItem" title="Compatibilidad" id="Wc7-AQ-ZAp"/>
                     <connections>
                         <outlet property="imagenSigno" destination="9C1-Jy-zq4" id="ywy-vf-nR9"/>
+                        <outlet property="textoCompatibilidadEntreSignos" destination="5jD-aO-H0p" id="oyK-QX-OOg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EXH-QW-4rM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3321.739130434783" y="517.63392857142856"/>
+            <point key="canvasLocation" x="3161" y="512"/>
         </scene>
         <!--Descripcion-->
         <scene sceneID="SqE-Xt-qnK">
@@ -154,7 +155,7 @@ Tardan en tomar decisiones pero cuando lo hacen son determinantes. Poseen un gra
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="n8t-Qx-1iv"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Descripcion" image="doc" catalog="system" id="zNA-1O-Zch"/>
+                    <tabBarItem key="tabBarItem" title="Descripcion" id="zNA-1O-Zch"/>
                     <connections>
                         <outlet property="descripcionDelSignoDelZodiaco" destination="tzD-DL-IRI" id="PuI-GI-KDj"/>
                         <outlet property="imagenDelSignoDeLZodiaco" destination="Vew-Ql-xwG" id="HK4-HL-Lh0"/>
@@ -204,8 +205,6 @@ Tardan en tomar decisiones pero cuando lo hacen son determinantes. Poseen un gra
     </scenes>
     <resources>
         <image name="cerdo" width="64" height="64"/>
-        <image name="doc" catalog="system" width="56" height="64"/>
-        <image name="square.and.arrow.down.fill" catalog="system" width="60" height="64"/>
         <image name="zodiaco" width="640" height="426"/>
     </resources>
 </document>

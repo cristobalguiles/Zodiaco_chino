@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     // MARK: - Outlets
     @IBOutlet weak var fechaIntroducida: UIDatePicker!
     
-
+    
     // MARK: - Livecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +27,8 @@ class ViewController: UIViewController {
         
         primerViewController.fechaDeNacimiento = fechaIntroducida.date
         segundoViewController.fechaDeNacimiento = fechaIntroducida.date
-}
-
+    }
+    
     // MARK: - IBActions
     @IBAction func confirmarFechaIntroducida(_ sender: UIButton) {
     }

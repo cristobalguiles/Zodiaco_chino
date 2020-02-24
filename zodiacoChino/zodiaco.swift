@@ -47,7 +47,7 @@ struct listaZodiacos {
             }
         }
         return tuZodiaco
-       // return Zodiaco(signo: "", fechaInicioSignoZodiaco: "", fechaFinSignoZodiaco: "", descripcion: "", compatibilidadEntreSignos: "")
+        // return Zodiaco(signo: "", fechaInicioSignoZodiaco: "", fechaFinSignoZodiaco: "", descripcion: "", compatibilidadEntreSignos: "")
     }
 }
 
